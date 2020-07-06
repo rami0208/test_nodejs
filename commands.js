@@ -31,7 +31,7 @@ const add = (item, price) => {
 
 const remove = item => {
     let gList = readFile("list.json")
-    const IndexFiltered = (index => index.item === item )
+    const IndexFiltered = (index => index.item !== item )
     let filteredList = gList.filter(IndexFiltered)
     writeFile("list.json", filteredList )
     }
